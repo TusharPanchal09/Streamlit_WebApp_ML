@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, silhouette_score
 
-train_data = pd.read_excel(r"D://Streamlit_webApp_ResoluteAi_intern//train.xlsx")
+train_data = pd.read_excel(r"train.xlsx")
 raw_data = pd.read_excel(r"rawdata.xlsx")
 
 st.title("Resolute AI Software Private Limited | Data Science - Machine Learning With Python internship assignment")
@@ -17,7 +17,7 @@ st.sidebar.header("\n\nTUSHAR PANCHAL\n"+"\n9144503655\n"+"\npanchalt37@gmail.co
 if nav == 'Task_1':
     st.header('Task 1: Machine Learning - Clustering')
     if st.checkbox('Show target values'):
-        target_values1 = pd.read_excel("D://Streamlit_webApp_ResoluteAi_intern//train.xlsx", nrows = 50)
+        target_values1 = pd.read_excel("train.xlsx", nrows = 50)
         st.table(target_values1)
     
     shapeTask1 = train_data.shape
@@ -76,7 +76,7 @@ if nav == 'Task_1':
 if nav == 'Task_2':
     st.header('Task 2: Machine Learning - Classification')
     if st.checkbox('Show target values'):
-        target_values2 = pd.read_excel("D://Streamlit_webApp_ResoluteAi_intern//train.xlsx", nrows = 50)
+        target_values2 = pd.read_excel("train.xlsx", nrows = 50)
         st.table(target_values2)
     
     shapeTask2 = train_data.shape
