@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, silhouette_score
 
 train_data = pd.read_excel(r"D://Streamlit_webApp_ResoluteAi_intern//train.xlsx")
-raw_data = pd.read_excel(r"D://Streamlit_webApp_ResoluteAi_intern//rawdata.xlsx")
+raw_data = pd.read_excel(r"rawdata.xlsx")
 
 st.title("Resolute AI Software Private Limited | Data Science - Machine Learning With Python internship assignment")
 nav = st.sidebar.radio('Home | Task list',['Task_1','Task_2','Task_3'])
@@ -135,13 +135,13 @@ if nav == 'Task_2':
 if nav == 'Task_3':
     st.header('Task 3: Python') 
     if st.checkbox('Show raw-data'):
-        task3_data = pd.read_excel("D://Streamlit_webApp_ResoluteAi_intern//rawdata.xlsx")
+        task3_data = pd.read_excel("rawdata.xlsx")
         st.table(task3_data)
     
     shapeTask3 = raw_data.shape
     st.write(f"☆ Shape of Raw dataset: {shapeTask3}")  
     
     output_sheet = 'new_output'
-    output_data = pd.read_excel("D://Streamlit_webApp_ResoluteAi_intern//rawdata.xlsx" , sheet_name = output_sheet)
+    output_data = pd.read_excel("rawdata.xlsx" , sheet_name = output_sheet)
     st.write(f"☆ Required output :")
     st.write(output_data)
